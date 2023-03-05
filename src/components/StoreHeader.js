@@ -1,7 +1,9 @@
 import './StoreHeader.css';
 
-function StoreHeader () {
-    let totalUnitsInCart = 0
+function StoreHeader ({ cartData }) {
+    let totalUnitsInCart = Object.values(cartData).reduce((sum, quantityForProduct) => {
+        return sum + quantityForProduct;
+    }, 0);
 
     return <header>
         <h1 className="font-cursive" style={{ flexGrow: 1, alignText: 'center', width: '100%' }}>Shushan Headquarters</h1>

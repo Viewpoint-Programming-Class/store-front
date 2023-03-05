@@ -3,7 +3,7 @@ import './Products.css';
 
 import { useState, useEffect } from 'react';
 
-const Products = () => {
+const Products = ({addRemoveProduct, cartData}) => {
     const [products, setProducts] = useState([]);
     
     useEffect(() => {
@@ -19,6 +19,9 @@ const Products = () => {
         <ul>
             {products.map((product) => {
                 return <Product
+                    cartData={cartData[product.ProductId]}
+                    id={product.ProductId}
+                    addRemoveProduct={addRemoveProduct}
                     name={product.ProductName}
                     description={product.Description}
                     image={product.Image}
