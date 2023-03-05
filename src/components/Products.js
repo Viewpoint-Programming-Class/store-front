@@ -14,24 +14,26 @@ const products = [
         image: '/images/sumchas-mask.jpg',
         price: 5.00,
     },
+    {
+        name: 'Colorful Mask',
+        description: 'A very colorful mask',
+        image: '/images/colorful-mask.jpg',
+        price: 10.00,
+    }
 ]
 
 const Products = () => {
     return <article>
         <h1>Products</h1>
         <ul>
-           <Product
-                name={products[0].name}
-                description={products[0].description}
-                image={products[0].image}
-                price={products[0].price}
-           />
-            <Product
-                name={products[1].name}
-                description={products[1].description}
-                image={products[1].image}
-                price={products[1].price}
-            />
+            {products.map((product) => {
+                return <Product
+                    name={product.name}
+                    description={product.description}
+                    image={product.image}
+                    price={product.price}
+                />
+            })}
         </ul>
     </article>;
 }
