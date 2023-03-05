@@ -28,3 +28,12 @@ main {
   display: flex;
   flex-direction: column;
 }
+
+.font-cursive {
+    font-family: "Brush Script MT", cursive;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: var(--semi-bold);
+}
