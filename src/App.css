@@ -7,6 +7,13 @@
   width: auto;
 }
 
+* {
+    --unit: 0.25rem;
+    --color-primary: rgb(75, 0, 130, var(--text-opacity));
+    --semi-bold: 500;
+    --text-opacity: 1;
+}
+
 *,
 ::after,
 ::before {
