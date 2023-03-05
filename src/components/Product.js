@@ -1,16 +1,16 @@
 import './Product.css';
-const Product = () => {
+const Product = (props) => {
     return <li>
     <div>
         <img
-            alt="Handmade Belgian Dark Chocolate Mask Pop"
-            src="/images/choc-mask.jpg"
+            alt={props.description}
+            src={props.image}
         />
     </div>
     <div style={{display: 'flex', flexDirection: 'column'}}>
-        <div><h3>Chocolate Mask</h3></div>
-        <div><p>Handmade Belgian Dark Chocolate Mask Pop</p></div>
-        <div style={{flexGrow: 1}}><b>$3.25</b></div>
+        <div><h3>{props.name}</h3></div>
+        <div><p>{props.description}</p></div>
+        <div style={{flexGrow: 1}}><b>${props.price}</b></div>
         <div
             style={{
                 display: 'flex',
