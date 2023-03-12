@@ -5,6 +5,7 @@ import StoreFooter from './components/StoreFooter';
 import { useState } from 'react';
 
 import { Routes, Route } from 'react-router-dom';
+import Checkout from "./Checkout";
 
 function App() {
   let [cartData, setCardData] = useState({});
@@ -24,6 +25,7 @@ function App() {
     <StoreHeader cartData={cartData}/>
     <Routes>
       <Route path="/" element={<Products addRemoveProduct={editCartProduct} cartData={cartData}/>} />
+      <Route path="/checkout" element={<Checkout products={[]} />} />
     </Routes>
     
     <StoreFooter />
