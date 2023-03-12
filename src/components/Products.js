@@ -17,8 +17,9 @@ const Products = ({addRemoveProduct, cartData}) => {
     return <article>
         <h1>Products</h1>
         <ul>
-            {products.map((product) => {
+            {products.map((product, index) => {
                 return <Product
+                    key={index}
                     cartData={cartData[product.ProductId]}
                     id={product.ProductId}
                     addRemoveProduct={addRemoveProduct}
