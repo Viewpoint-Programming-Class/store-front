@@ -1,8 +1,8 @@
 import './StoreHeader.css';
 
 function StoreHeader ({ cartData }) {
-    let totalUnitsInCart = Object.values(cartData).reduce((sum, quantityForProduct) => {
-        return sum + quantityForProduct;
+    let totalUnitsInCart = Object.values(cartData).reduce((sum, { qty }) => {
+        return sum + qty;
     }, 0);
 
     return <header>
