@@ -4,6 +4,8 @@ import Products from './components/Products';
 import StoreFooter from './components/StoreFooter';
 import { useState } from 'react';
 
+import { Routes, Route } from 'react-router-dom';
+
 function App() {
   let [cartData, setCardData] = useState({});
 
@@ -20,7 +22,10 @@ function App() {
 
   return (<main>
     <StoreHeader cartData={cartData}/>
-    <Products addRemoveProduct={editCartProduct} cartData={cartData}/>
+    <Routes>
+      <Route path="/" element={<Products addRemoveProduct={editCartProduct} cartData={cartData}/>} />
+    </Routes>
+    
     <StoreFooter />
    </main>);
 }
